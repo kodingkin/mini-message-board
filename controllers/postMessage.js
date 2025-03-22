@@ -1,4 +1,4 @@
-const { messages } = require('../app');
+const { messages } = require('../message');
 const asyncHandler = require("express-async-handler");
 
 const postMessage = asyncHandler(async (req, res, next) => {
@@ -6,6 +6,7 @@ const postMessage = asyncHandler(async (req, res, next) => {
     const messageUser = req.body.messageUser;
 
     messages.push({ text: messageText, user: messageUser, added: new Date() });
+    
     res.redirect("/")
 });
 
