@@ -9,7 +9,7 @@ const indexRouter = require('./routes/indexRouter.js');
 const error404 = require('./errors/404.js');
 const catchError = require('./errors/catch.js');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
