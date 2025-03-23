@@ -13,6 +13,7 @@
             <li>
                 <strong><%= message.user %></strong>: <%= message.text %>
                 <br><small><%= message.added.toLocaleString() %></small>
+                <button onclick="window.location.href = 'message.ejs';"></button> >Detail</button>
             </li>
         <% }) %>
     </ul>
